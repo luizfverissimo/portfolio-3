@@ -2,9 +2,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 
+import MainLogo from "../components/MainLogo"
+
 export default function Home() {
   return (
     <main>
+      <img className="hero_image" src="/hero_small.jpg"/>
       <header>
         <div>
           <img src="/logo.png" alt="Logo LF Verissimo"/>
@@ -16,6 +19,9 @@ export default function Home() {
           </nav>
         </div>
       </header>
+      <section className="hero_content">
+        <MainLogo/>
+      </section>
       <section className="projects_section">
       </section>
       <section className="about_section">
