@@ -1,16 +1,18 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
+import Head from 'next/head';
+import Image from 'next/image';
 
-import MainLogo from "../components/MainLogo"
+import styles from '../styles/Home.module.scss';
+
+import MainLogo from '../components/MainLogo';
 
 export default function Home() {
+
   return (
     <main>
-      <img className="hero_image" src="/hero_small.jpg"/>
-      <header>
+      <img className='hero_image' src='/hero_small.jpg' />
+      <header className={styles.headerSection}>
         <div>
-          <img src="/logo.png" alt="Logo LF Verissimo"/>
+          <img src='/logo.png' alt='Logo LF Verissimo' />
           <nav>
             <a>Projects</a>
             <a>About me</a>
@@ -19,17 +21,13 @@ export default function Home() {
           </nav>
         </div>
       </header>
-      <section className="hero_content">
+      <section className={styles.heroContent}>
         <MainLogo/>
       </section>
-      <section className="projects_section">
-      </section>
-      <section className="about_section">
-      </section>
-      <section className="contact_section">
-      </section>
-      <footer>
-      </footer>
+      <section className='projects_section'></section>
+      <section className='about_section'></section>
+      <section className='contact_section'></section>
+      <footer></footer>
     </main>
-  )
+  );
 }
