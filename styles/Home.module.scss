@@ -54,15 +54,61 @@
         }
       }
     }
+  }
+}
 
-    .heroContent {
-      width: 100%;
-      max-width: 1440px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      z-index: 1;
+.heroContent {
+  width: 100%;
+  max-width: 1440px;
+  height: calc(80vh - 84px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  color: var(--white);
+
+  h1 {
+    font-family: Poppins, sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    margin-top: 3rem;
+  }
+
+  p {
+    font-family: Lato, sans-serif;
+    font-size: 1.5rem;
+    width: 30ch;
+    text-align: center;
+
+    strong {
+      color: var(--primary);
     }
+  }
+
+  .heroButtonsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+    margin: 2rem;
+  }
+}
+
+.projectSection {
+  background: linear-gradient(149.18deg, #ffffff 1.33%, #ebebeb 99.4%);
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .projectsContent {
+    margin-top: 6rem;
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
