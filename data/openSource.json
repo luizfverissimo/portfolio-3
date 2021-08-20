@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Mini Video Me",
+    "type": "Desktop app",
+    "description": "Small webcam player focused on providing an easy way to add and control your webcam during recordings. – My contribution: Added video input selector (2021).",
+    "buttonText": "Open the project",
+    "buttonLink": "https://github.com/maykbrito/mini-video-me/releases",
+    "githubLink": "https://github.com/maykbrito/mini-video-me",
+    "image": "/prints/mini.png",
+    "techs": ["React", "Next", "Node", "Sass", "Prisma"]
+  }
+]

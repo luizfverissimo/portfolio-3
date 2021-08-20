@@ -77,11 +77,12 @@
 .heroContent {
   width: 100%;
   max-width: 1440px;
-  height: 100vh;
+  height: calc(100vh - 84px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 84px;
   z-index: 1;
   color: var(--white);
 
@@ -140,5 +141,24 @@
     .projectOpenSourceSection {
       margin-top: 6rem;
     } 
+  }
+}
+
+.aboutSection {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(118.4deg, #101010 0.41%, #242424 100%);
+
+  .aboutContent {
+    margin-top: 6rem;
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
   }
 }

@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { ArrowDown, Mail, GitHub } from 'react-feather';
 
 import styles from '../styles/Home.module.scss';
+import projectsData from '../data/projects.json';
+import openSourceData from '../data/openSource.json';
 
 import MainLogo from '../components/MainLogo';
 import Button from '../components/Button';
@@ -16,11 +18,11 @@ export default function Home() {
       <img className='hero_image' src='/hero_small.jpg' />
       <header className={styles.headerSection}>
         <div>
-          <a>
+          <a href='#'>
             <img src='/logo.png' alt='Logo LF Verissimo' />
           </a>
           <nav>
-            <a>Projects</a>
+            <a href='#projects'>Projects</a>
             <a>About me</a>
             <a>Resume</a>
             <a>Contact</a>
@@ -45,32 +47,32 @@ export default function Home() {
           </Button>
         </div>
       </section>
-      <section className={styles.projectSection}>
+      <section id='projects' className={styles.projectSection}>
         <div className={styles.projectsContent}>
           <SectionTitle>Projects</SectionTitle>
           <div className={styles.projectsGrid}>
-            <ProjectItem />
-            <ProjectItem />
-            <ProjectItem />
-            <ProjectItem />
-            <ProjectItem />
-            <ProjectItem />
+            {projectsData.map((project, index) => {
+              return <ProjectItem key={index} data={project} />;
+            })}
           </div>
           <Button isBlackText>
             All my projects on GitHub <GitHub />
           </Button>
           <div className={styles.projectOpenSourceSection}>
-            <SectionTitle>
-              Open Source
-              Contribution
-            </SectionTitle>
+            <SectionTitle>Open Source Contribution</SectionTitle>
             <div className={styles.projectsGrid}>
-              <ProjectItem />
+              {openSourceData.map((project, index) => {
+                return <ProjectItem key={index} data={project} />;
+              })}
             </div>
           </div>
         </div>
       </section>
-      <section className='about_section'></section>
+      <section className={styles.aboutSection}>
+        <div className={styles.aboutContent}>
+          <SectionTitle isWhiteText>About me</SectionTitle>
+        </div>
+      </section>
       <section className='contact_section'></section>
       <footer></footer>
     </main>

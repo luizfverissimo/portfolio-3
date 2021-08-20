@@ -1,10 +1,10 @@
 import styles from './styles.module.scss'
 
-function ButtonSecondary({children}) {
+function ButtonSecondary({children, onClick, href}) {
   return (
-    <button type="button" className={styles.buttonSecondary}>
+    <a href={href} className={styles.buttonSecondary} onClick={onClick}>
       {children}
-    </button>
+    </a>
   )
 }
 

@@ -3,33 +3,35 @@ import { ExternalLink } from 'react-feather';
 import styles from './styles.module.scss';
 
 import ButtonSecondary from '../ButtonSecondary';
-import Button from '../Button';
 
-function ProjectItem() {
-  const techs = ['React', 'Next', 'Node', 'Sass', 'Prisma'];
+function ProjectItem({data}) {
+  if(!data) {
+    return (
+      <h1>Carregando...</h1>
+    )
+  }
 
   return (
     <div className={styles.projectItemContainer}>
       <div className={styles.imageContainer}>
-        <img src='/prints/offers.png' alt='Project screenshot' />
+        <img src={data.image} alt={`${data.name} screenshot`} />
       </div>
       <div className={styles.projectItemInfos}>
-        <p className={styles.subtitle}>Fullstack project</p>
-        <h3>Offers Aggregator</h3>
+        <p className={styles.subtitle}>{data.type}</p>
+        <h3>{data.name}</h3>
         <p>
-          FullStack application of an offers/deal/coupons aggregator with
-          administrator panel.
+          {data.description}
         </p>
         <div className={styles.projectItemTechTags}>
-          {techs.forEach((tech, index) => {
-            return <spam key={index}>{tech}</spam>;
+          {data.techs.map((tech, index) => {
+            return <p key={index}>{tech}</p>;
           })}
         </div>
         <div className={styles.projectItemButtonsContainer}>
-          <ButtonSecondary>
-            Open the project <ExternalLink size={16} />
+          <ButtonSecondary href={data.buttonLink}>
+            {data.buttonText} <ExternalLink size={16} />
           </ButtonSecondary>
-          <a>
+          <a className={styles.githubLink} href={data.githubLink} target="_blank">
             View on GitHub
           </a>
         </div>

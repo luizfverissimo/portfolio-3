@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Offers Aggregator",
+    "type": "Fullstack project",
+    "description": "FullStack application of an offers/deal/coupons aggregator with administrator panel.",
+    "buttonText": "Open the project",
+    "buttonLink": "https://offers-aggregator-git-internationalization.luizfverissimo.vercel.app/",
+    "githubLink": "https://github.com/luizfverissimo/offer-aggregator",
+    "image": "/prints/offers.png",
+    "techs": ["React", "Next", "Node", "Sass", "Prisma"]
+  },
+  {
+    "name": "WhatsApp Message Sender",
+    "type": "Desktop app",
+    "description": "Application to send automatic WhatsApp messages using a .xls or .xlsx contanct’s table.",
+    "buttonText": "Download the app (Win)",
+    "buttonLink": "https://onedrive.live.com/?cid=281f3c8ce128151e&id=281F3C8CE128151E%21219364&authkey=!AHzwEVK1lXf_LTQ",
+    "githubLink": "https://github.com/luizfverissimo/whatsapp-message-sender",
+    "image": "/prints/whats.png",
+    "techs": ["React", "Electron", "Node", "Puppeteer", "Sass"]
+  },
+  {
+    "name": "Fire Dice Roller",
+    "type": "Android app",
+    "description": "Application created to facilitate dice rolls in an RPG game with option to save your most used rolls.",
+    "buttonText": "Download the app",
+    "buttonLink": "https://play.google.com/store/apps/details?id=com.lfverissimo.firediceroller",
+    "githubLink": "https://github.com/luizfverissimo/dice-roller",
+    "image": "/prints/fire.png",
+    "techs": ["React Native", "Expo", "Redux"]
+  },
+  {
+    "name": "Truco Scoreboard",
+    "type": "Android app",
+    "description": "Application to score points of a Truco match with a games score history.",
+    "buttonText": "Download the app",
+    "buttonLink": "https://play.google.com/store/apps/details?id=com.luizfverissimo.placartruco",
+    "githubLink": "https://github.com/luizfverissimo/placar-truco",
+    "image": "/prints/truco.png",
+    "techs": ["React Native", "Expo", "Redux"]
+  },
+  {
+    "name": "Nerdcast - Podcast player",
+    "type": "Landing page",
+    "description": "Landing page for the NerdCast RPG episodes from Jovem Nerd.",
+    "buttonText": "Open the project",
+    "buttonLink": "https://nerdcast-rpg-player.vercel.app/",
+    "githubLink": "https://github.com/luizfverissimo/nerdcast-rpg-player",
+    "image": "/prints/nerdcast.png",
+    "techs": ["React", "Next", "Tailwind CSS", "Framer-motion"]
+  },
+  {
+    "name": "RPG Discord Bot",
+    "type": "Back-end project",
+    "description": "Text-based RPG game created in a ChatBot for Discord.",
+    "buttonText": "Go to Discord Server",
+    "buttonLink": "https://discord.com/invite/NyAHFFY",
+    "githubLink": "https://github.com/luizfverissimo/RPGBotDiscordJS",
+    "image": "/prints/discord.png",
+    "techs": ["Node", "Discord.js", "Mongoose"]
+  }
+]
