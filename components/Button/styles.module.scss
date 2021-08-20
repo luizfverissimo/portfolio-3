@@ -13,6 +13,10 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  &.textBlack {
+    color: var(--black);
+  }
   
   :nth-child(1) {
     margin-left: 0.5rem;

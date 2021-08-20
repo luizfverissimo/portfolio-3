@@ -1,13 +1,14 @@
 import Head from 'next/head';
 import Image from 'next/image';
 
-import { ArrowDown, Mail } from 'react-feather';
+import { ArrowDown, Mail, GitHub } from 'react-feather';
 
 import styles from '../styles/Home.module.scss';
 
 import MainLogo from '../components/MainLogo';
 import Button from '../components/Button';
 import SectionTitle from '../components/SectionTitle';
+import ProjectItem from '../components/ProjectItem';
 
 export default function Home() {
   return (
@@ -15,7 +16,9 @@ export default function Home() {
       <img className='hero_image' src='/hero_small.jpg' />
       <header className={styles.headerSection}>
         <div>
-          <img src='/logo.png' alt='Logo LF Verissimo' />
+          <a>
+            <img src='/logo.png' alt='Logo LF Verissimo' />
+          </a>
           <nav>
             <a>Projects</a>
             <a>About me</a>
@@ -33,18 +36,38 @@ export default function Home() {
         </p>
         <div className={styles.heroButtonsContainer}>
           <Button>
-            PROJECTS
-            <ArrowDown />
+            Projects
+            <ArrowDown size={22} />
           </Button>
           <Button>
-            CONTACT
-            <Mail />
+            Contact
+            <Mail size={22} />
           </Button>
         </div>
       </section>
       <section className={styles.projectSection}>
         <div className={styles.projectsContent}>
-          <SectionTitle>PROJECTS</SectionTitle>
+          <SectionTitle>Projects</SectionTitle>
+          <div className={styles.projectsGrid}>
+            <ProjectItem />
+            <ProjectItem />
+            <ProjectItem />
+            <ProjectItem />
+            <ProjectItem />
+            <ProjectItem />
+          </div>
+          <Button isBlackText>
+            All my projects on GitHub <GitHub />
+          </Button>
+          <div className={styles.projectOpenSourceSection}>
+            <SectionTitle>
+              Open Source
+              Contribution
+            </SectionTitle>
+            <div className={styles.projectsGrid}>
+              <ProjectItem />
+            </div>
+          </div>
         </div>
       </section>
       <section className='about_section'></section>
