@@ -1,11 +1,18 @@
-import styles from './styles.module.scss'
+import styles from './styles.module.scss';
 
-function Button({children, isBlackText}) {
+function Button({ children, isBlackText, href, blank, id }) {
   return (
-    <button type="button" className={styles.button} style={isBlackText ? {color: "var(--black)"}: {}} >
+    <a
+      id={id}
+      type='button'
+      href={href}
+      target={blank ? '_blank' : ''}
+      className={styles.button}
+      style={isBlackText ? { color: 'var(--black)' } : {}}
+    >
       {children}
-    </button>
-  )
+    </a>
+  );
 }
 
-export default Button
+export default Button;

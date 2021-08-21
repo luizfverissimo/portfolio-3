@@ -140,7 +140,7 @@
 
     .projectOpenSourceSection {
       margin-top: 6rem;
-    } 
+    }
   }
 }
 
@@ -153,12 +153,126 @@
   background: linear-gradient(118.4deg, #101010 0.41%, #242424 100%);
 
   .aboutContent {
-    margin-top: 6rem;
+    margin: 6rem 0;
     width: 100%;
     max-width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: var(--white);
+
+    .avatarContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 4rem;
+      margin-bottom: 1rem;
+
+      .avatar {
+        border-radius: 100%;
+        width: 12rem;
+        height: auto;
+      }
+
+
+    }
+
+    h3 {
+      font-family: Poppins, sans-serif;
+      font-size: 2.25rem;
+      text-align: center;
+    }
+
+    .location {
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    .aboutDescription {
+      margin: 2rem 0;
+      width: 100%;
+      max-width: 60ch;
+      color: var(--greyText);
+    }
+
+    h4 {
+      font-size: 1.5em;
+      font-weight: bold;
+      font-family: Poppins, sans-serif;
+      color: var(--primary);
+      margin: 2rem 0 1rem 0;
+    }
+
+    .skillsContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      gap: 1rem;
+    }
+
+    .formationContainer {
+      margin-top: 4rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .experienceSection {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .timeline {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          margin-bottom: 2rem;
+
+          span {
+            font-weight: bold;
+          }
+        }
+
+        .assignmentsContainer {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          color: var(--black);
+          font-size: 0.8rem;
+        }
+        
+        h5 {
+          color: var(--primary);
+          font-weight: bold;
+          font-size: 1rem;
+          margin-top: 2rem;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .educationContainer {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h5 {
+          font-weight: bold;
+          font-size: 1.125rem;
+          margin-bottom: 1rem;
+          font-family: Poppins, sans-serif;
+        }
+
+        p {
+          margin-bottom: 2rem;
+        }
+      }
+    }
   }
 }
