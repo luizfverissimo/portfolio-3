@@ -7,9 +7,10 @@ import {
   faSass,
   faJsSquare,
   faReact,
-  faNodeJs
+  faNodeJs,
+  faGithub
 } from '@fortawesome/free-brands-svg-icons';
-import { ArrowDown, Mail, GitHub, Download } from 'react-feather';
+import { ArrowDown, Mail, Download } from 'react-feather';
 
 import styles from '../styles/Home.module.scss';
 import projectsData from '../data/projects.json';
@@ -21,10 +22,13 @@ import SectionTitle from '../components/SectionTitle';
 import ProjectItem from '../components/ProjectItem';
 import TagItem from '../components/TagItem';
 import TooltipSkills from '../components/TooltipSkills';
+import NextIcon from '../components/NextIcon';
+import SocialFloatBar from '../components/SocialFloatBar';
 
 export default function Home() {
   return (
     <main>
+      <SocialFloatBar/>
       <img className='hero_image' src='/hero_small.jpg' />
       <header className={styles.headerSection}>
         <div>
@@ -70,7 +74,7 @@ export default function Home() {
             href='https://github.com/luizfverissimo?tab=repositories'
             blank
           >
-            All my projects on GitHub <GitHub />
+            All my projects on GitHub <FontAwesomeIcon icon={faGithub}/>
           </Button>
           <div className={styles.projectOpenSourceSection}>
             <SectionTitle>Open Source Contribution</SectionTitle>
@@ -122,6 +126,9 @@ export default function Home() {
             <TooltipSkills tooltip='React.js'>
               <FontAwesomeIcon icon={faReact} />
             </TooltipSkills>
+            <TooltipSkills tooltip='Next.js'>
+              <NextIcon/>
+            </TooltipSkills>
             <TooltipSkills tooltip='Node.js'>
               <FontAwesomeIcon icon={faNodeJs} />
             </TooltipSkills>
@@ -159,7 +166,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className='contact_section'></section>
+      <section className={styles.contactSection}>
+        <SectionTitle >Contact</SectionTitle>
+      </section>
       <footer></footer>
     </main>
   );
