@@ -1,0 +1,42 @@
+.contactFormContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6rem;
+
+  label {
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    font-size: 1.125rem;
+  }
+
+  input, textarea  {
+    width: 100%;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    border-radius: 12px;
+    border: solid 2px var(--black);
+    padding: 0.5rem 1rem;
+    outline: 0;
+    transition: all 0.2s ease;
+    font-family: Lato, sans-serif;
+
+    &:focus {
+      border: solid 2px var(--primary);
+    }
+  }
+
+  textarea {
+    height: 10rem;
+  }
+
+  .contactButtonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

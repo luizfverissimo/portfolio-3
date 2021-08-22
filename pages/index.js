@@ -10,7 +10,8 @@ import {
   faNodeJs,
   faGithub
 } from '@fortawesome/free-brands-svg-icons';
-import { ArrowDown, Mail, Download } from 'react-feather';
+import { ArrowDown, ArrowUp, Mail, Download } from 'react-feather';
+import { Toaster } from 'react-hot-toast';
 
 import styles from '../styles/Home.module.scss';
 import projectsData from '../data/projects.json';
@@ -24,11 +25,17 @@ import TagItem from '../components/TagItem';
 import TooltipSkills from '../components/TooltipSkills';
 import NextIcon from '../components/NextIcon';
 import SocialFloatBar from '../components/SocialFloatBar';
+import ContactForm from '../components/ContactForm';
 
 export default function Home() {
   return (
     <main>
-      <SocialFloatBar/>
+      <Head>
+        <title>LF Verissimo | Front-end Developer</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+      </Head>
+      <Toaster />
+      <SocialFloatBar />
       <img className='hero_image' src='/hero_small.jpg' />
       <header className={styles.headerSection}>
         <div>
@@ -39,7 +46,7 @@ export default function Home() {
             <a href='#projects'>Projects</a>
             <a href='#about-me'>About me</a>
             <a href='#resume'>Resume</a>
-            <a>Contact</a>
+            <a href='#contact'>Contact</a>
           </nav>
         </div>
       </header>
@@ -55,7 +62,7 @@ export default function Home() {
             Projects
             <ArrowDown size={22} />
           </Button>
-          <Button>
+          <Button href='#contact'>
             Contact
             <Mail size={22} />
           </Button>
@@ -74,7 +81,7 @@ export default function Home() {
             href='https://github.com/luizfverissimo?tab=repositories'
             blank
           >
-            All my projects on GitHub <FontAwesomeIcon icon={faGithub}/>
+            All my projects on GitHub <FontAwesomeIcon icon={faGithub} />
           </Button>
           <div className={styles.projectOpenSourceSection}>
             <SectionTitle>Open Source Contribution</SectionTitle>
@@ -91,12 +98,12 @@ export default function Home() {
           <SectionTitle isWhiteText>About me</SectionTitle>
           <div className={styles.avatarContainer}>
             <img
-              src='/avatar.jpg'
+              src='/avatar-lfv.jpg'
               className={styles.avatar}
               alt='Luiz Fernando Verissimo avatar'
             />
           </div>
-          <h3>Luiz Fernando Verissimo</h3>
+          <h3 id='resume'>Luiz Fernando Verissimo</h3>
           <p className={styles.location}>Based in Londrina/PR - Brazil</p>
           <p className={styles.aboutDescription}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
@@ -106,7 +113,7 @@ export default function Home() {
             finibus. Donec malesuada eget dolor ut scelerisque. Suspendisse
             suscipit consequat placerat.
           </p>
-          <Button id='resume' href='#' blank>
+          <Button href='#' blank>
             RESUME <Download />
           </Button>
           <h4>Skills</h4>
@@ -127,7 +134,7 @@ export default function Home() {
               <FontAwesomeIcon icon={faReact} />
             </TooltipSkills>
             <TooltipSkills tooltip='Next.js'>
-              <NextIcon/>
+              <NextIcon />
             </TooltipSkills>
             <TooltipSkills tooltip='Node.js'>
               <FontAwesomeIcon icon={faNodeJs} />
@@ -161,15 +168,28 @@ export default function Home() {
                 Coursing -{' '}
                 <strong>Technologist in System Analysis and Development</strong>
               </p>
-              <img src="/positivo.png" alt="Universidade Positivo"/>
+              <img src='/positivo.png' alt='Universidade Positivo' />
             </div>
           </div>
         </div>
       </section>
-      <section className={styles.contactSection}>
-        <SectionTitle >Contact</SectionTitle>
+      <section id='contact' className={styles.contactSection}>
+        <SectionTitle>Contact</SectionTitle>
+        <div className={styles.contactContent}>
+          <ContactForm />
+        </div>
       </section>
-      <footer></footer>
+      <footer className={styles.footer}>
+        <div className={styles.footerContent}>
+          <a href='#'>
+            <img src='/logo.png' alt='Logo LF Verissimo' />
+          </a>
+          <a href='#'>
+            BACK TO TOP <ArrowUp size={16} />
+          </a>
+          <div />
+        </div>
+      </footer>
     </main>
   );
 }
