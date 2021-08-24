@@ -1,4 +1,5 @@
 import { ExternalLink } from 'react-feather';
+import Image from "next/image"
 
 import styles from './styles.module.scss';
 
@@ -13,8 +14,8 @@ function ProjectItem({ data }) {
   return (
     <div className={styles.projectItemContainer}>
       <div className={styles.imageContainer}>
-        <a href={data.buttonLink} target="_blank">
-          <img src={data.image} alt={`${data.name} screenshot`} />
+        <a href={data.buttonLink} target="_blank" rel="noopener noreferrer">
+          <Image src={data.image} alt={`${data.name} screenshot`} layout="fill"/>
         </a>
       </div>
       <div className={styles.projectItemInfos}>
@@ -34,6 +35,7 @@ function ProjectItem({ data }) {
             className={styles.githubLink}
             href={data.githubLink}
             target='_blank'
+            rel="noopener noreferrer"
           >
             View on GitHub
           </a>

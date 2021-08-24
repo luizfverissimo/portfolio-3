@@ -16,6 +16,7 @@ import { Toaster } from 'react-hot-toast';
 import styles from '../styles/Home.module.scss';
 import projectsData from '../data/projects.json';
 import openSourceData from '../data/openSource.json';
+import heroImage from '../public/hero_small.jpg'
 
 import MainLogo from '../components/MainLogo';
 import Button from '../components/Button';
@@ -36,11 +37,23 @@ export default function Home() {
       </Head>
       <Toaster />
       <SocialFloatBar />
-      <img className='hero_image' src='/hero_small.jpg' />
+      <Image
+        className='hero_image'
+        src={heroImage}
+        alt='Background image of a keyboard'
+        layout='fill'
+        placeholder="blur"
+        quality={100}
+      />
       <header className={styles.headerSection}>
         <div>
           <a href='#'>
-            <img src='/logo.png' alt='Logo LF Verissimo' />
+            <Image
+              src='/logo.png'
+              alt='Logo LF Verissimo'
+              width={124}
+              height={15}
+            />
           </a>
           <nav>
             <a href='#projects'>Projects</a>
@@ -57,16 +70,16 @@ export default function Home() {
           Focused on creating <strong>modern</strong> and <strong>fast</strong>{' '}
           solutions to web problems
         </p>
-          <div className={styles.heroButtonsContainer}>
-            <Button href='#projects'>
-              Projects
-              <ArrowDown size={22} />
-            </Button>
-            <Button href='#contact'>
-              Contact
-              <Mail size={22} />
-            </Button>
-          </div>
+        <div className={styles.heroButtonsContainer}>
+          <Button href='#projects'>
+            Projects
+            <ArrowDown size={22} />
+          </Button>
+          <Button href='#contact'>
+            Contact
+            <Mail size={22} />
+          </Button>
+        </div>
       </section>
       <section id='projects' className={styles.projectSection}>
         <div className={styles.projectsContent}>
@@ -97,10 +110,12 @@ export default function Home() {
         <div className={styles.aboutContent}>
           <SectionTitle isWhiteText>About me</SectionTitle>
           <div className={styles.avatarContainer}>
-            <img
+            <Image
               src='/avatar-lfv.jpg'
               className={styles.avatar}
               alt='Luiz Fernando Verissimo avatar'
+              width={192}
+              height={205}
             />
           </div>
           <h3 id='resume'>Luiz Fernando Verissimo</h3>
@@ -149,8 +164,17 @@ export default function Home() {
                 <span>Now</span>
               </div>
               <p>Front-end developer intern at</p>
-              <a href='https://mandarin.com.br/' target='_blank'>
-                <img src='/mandarin.png' alt='Agência Mandarin' />
+              <a
+                href='https://mandarin.com.br/'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <Image
+                  src='/mandarin.png'
+                  alt='Agência Mandarin'
+                  width={170}
+                  height={67}
+                />
               </a>
               <h5>Assignments</h5>
               <div className={styles.assignmentsContainer}>
@@ -168,7 +192,12 @@ export default function Home() {
                 Coursing -{' '}
                 <strong>Technologist in System Analysis and Development</strong>
               </p>
-              <img src='/positivo.png' alt='Universidade Positivo' />
+              <Image
+                src='/positivo.png'
+                alt='Universidade Positivo'
+                width={163}
+                height={51}
+              />
             </div>
           </div>
         </div>
@@ -182,7 +211,12 @@ export default function Home() {
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
           <a href='#'>
-            <img src='/logo.png' alt='Logo LF Verissimo' />
+            <Image
+              src='/logo.png'
+              alt='Logo LF Verissimo'
+              width={124}
+              height={15}
+            />
           </a>
           <a href='#'>
             BACK TO TOP <ArrowUp size={16} />

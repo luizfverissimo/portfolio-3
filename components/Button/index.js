@@ -9,6 +9,7 @@ function Button({ children, isBlackText, href, blank, id }) {
       target={blank ? '_blank' : ''}
       className={styles.button}
       style={isBlackText ? { color: 'var(--black)' } : {}}
+      rel="noopener noreferrer"
     >
       {children}
     </a>

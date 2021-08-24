@@ -77,7 +77,7 @@ function ContactForm() {
       />
       <label htmlFor='message'>Message</label>
       <textarea
-        i='message'
+        id='message'
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       />
