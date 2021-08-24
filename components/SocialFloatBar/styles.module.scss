@@ -1,3 +1,17 @@
+$mobile: 1000px;
+$tablet: 1440px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
 .socialWrapper {
   width: 100vw;
   max-width: 1440px;
@@ -6,15 +20,24 @@
   justify-content: flex-end;
   position: fixed;
   bottom: 2rem;
-  z-index: 99;
+  z-index: 90;
   pointer-events: none;
 
+  @include tablet {
+    padding: 0 2rem;
+  }
+
+  @include mobile {
+    justify-content: center;
+  }
+
   .socialContainer {
+    pointer-events: all;
     padding: 0.5rem 0.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    z-index: 99;
     background-color: var(--primary);
     font-size: 1.5rem;
     border-radius: 12px;

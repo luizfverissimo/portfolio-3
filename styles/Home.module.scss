@@ -1,6 +1,20 @@
+$mobile: 1000px;
+$tablet: 1440px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
 .headerSection {
   width: 100%;
-  height: 84px;
+  height: 64px;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
@@ -32,10 +46,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+
+    @include tablet {
+      padding: 0 2rem;
+    }
+
+    @include mobile() {
+      justify-content: center;
+    }
 
     nav {
       height: 100%;
@@ -46,6 +65,10 @@
       color: var(--white);
       font-weight: bold;
       font-size: 1.125rem;
+
+      @include mobile() {
+        display: none;
+      }
 
       a {
         cursor: pointer;
@@ -91,6 +114,13 @@
     font-weight: bold;
     font-size: 3rem;
     margin-top: 3rem;
+    text-align: center;
+
+    @include mobile {
+      padding: 0 2rem;
+      font-size: 2.5rem;
+      line-height: 40px;
+    }
   }
 
   p {
@@ -98,6 +128,10 @@
     font-size: 1.5rem;
     width: 30ch;
     text-align: center;
+
+    @include mobile {
+      padding: 0 2rem;
+    }
 
     strong {
       color: var(--primary);
@@ -110,6 +144,13 @@
     gap: 3rem;
     align-items: center;
     margin: 2rem;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
   }
 }
 
@@ -152,6 +193,14 @@
   align-items: center;
   background: linear-gradient(118.4deg, #101010 0.41%, #242424 100%);
 
+  @include tablet {
+
+  }
+
+  @include mobile() {
+
+  }
+
   .aboutContent {
     margin: 6rem 0;
     width: 100%;
@@ -193,6 +242,10 @@
       width: 100%;
       max-width: 60ch;
       color: var(--greyText);
+
+      @include mobile {
+        padding: 0 2rem;
+      }
     }
 
     h4 {
@@ -209,6 +262,12 @@
       justify-content: center;
       font-size: 4rem;
       gap: 1rem;
+
+      @include mobile {
+        padding: 0 2rem;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
     }
 
     .formationContainer {
@@ -217,11 +276,27 @@
       display: flex;
       justify-content: space-between;
 
+      @include mobile {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 4rem;
+      }
+
       .experienceSection {
         width: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @include tablet {
+          padding: 0 2rem;
+        }
+
+        @include mobile {
+          width: 100%;
+          text-align: center;
+        }
 
         .timeline {
           width: 100%;
@@ -233,6 +308,12 @@
 
           span {
             font-weight: bold;
+          }
+
+          img {
+            @include mobile {
+              width: 100px;
+            }
           }
         }
 
@@ -259,6 +340,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @include tablet {
+          padding: 0 2rem;
+        }
+
+        @include mobile {
+          width: 100%;
+          text-align: center;
+        }
 
         h5 {
           font-weight: bold;
@@ -291,6 +381,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include mobile {
+      padding: 0 2rem;
+    }
   }
 }
 
@@ -303,6 +397,14 @@
   justify-content: center;
   z-index: 10;
 
+  @include tablet {
+    padding: 0 2rem;
+  }
+
+  @include mobile {
+    height: auto;
+  }
+
   .footerContent {
     width: 100%;
     display: flex;
@@ -314,6 +416,13 @@
 
     img {
       width: 124px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      justify-content: flex-start;
+      margin: 3rem 0 6rem 0;
+      gap: 1rem;
     }
   }
 }

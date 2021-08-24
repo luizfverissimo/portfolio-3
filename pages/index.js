@@ -57,16 +57,16 @@ export default function Home() {
           Focused on creating <strong>modern</strong> and <strong>fast</strong>{' '}
           solutions to web problems
         </p>
-        <div className={styles.heroButtonsContainer}>
-          <Button href='#projects'>
-            Projects
-            <ArrowDown size={22} />
-          </Button>
-          <Button href='#contact'>
-            Contact
-            <Mail size={22} />
-          </Button>
-        </div>
+          <div className={styles.heroButtonsContainer}>
+            <Button href='#projects'>
+              Projects
+              <ArrowDown size={22} />
+            </Button>
+            <Button href='#contact'>
+              Contact
+              <Mail size={22} />
+            </Button>
+          </div>
       </section>
       <section id='projects' className={styles.projectSection}>
         <div className={styles.projectsContent}>

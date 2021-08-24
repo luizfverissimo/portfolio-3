@@ -1,3 +1,17 @@
+$mobile: 1000px;
+$tablet: 1440px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
 .contactFormContainer {
   width: 100%;
   display: flex;
@@ -38,5 +52,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 2rem;
+    }
   }
 }

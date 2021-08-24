@@ -1,9 +1,29 @@
+$mobile: 1000px;
+$tablet: 1440px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
 .sectionTitle {
   font-size: 2.5rem;
   color: var(--black);
   font-family: Poppins, sans-serif;
   font-weight: bold;
   position: relative;
+  text-align: center;
+  
+  @include mobile {
+    margin: 0 4rem;
+  }
+
 
   &:after {
     content: "";
@@ -13,6 +33,6 @@
     position: absolute;
     bottom: 0px;
     left: 0;
-    border-radius: 10px;
+    border-radius: 10px;  
   }
 }

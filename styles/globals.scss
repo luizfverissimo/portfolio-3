@@ -8,6 +8,20 @@
   --greyText: #858585;
 }
 
+$mobile: 1000px;
+$tablet: 1440px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
 html,
 body {
   width: 100vw;
@@ -19,6 +33,12 @@ body {
   color: var(--black);
   scroll-behavior: smooth;
   background-color: var(--black);
+
+  @include mobile {
+    .mainLogo {
+      width: 270px;
+    }
+  }
 }
 
 a {
