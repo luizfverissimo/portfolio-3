@@ -16,7 +16,7 @@ import { Toaster } from 'react-hot-toast';
 import styles from '../styles/Home.module.scss';
 import projectsData from '../data/projects.json';
 import openSourceData from '../data/openSource.json';
-import heroImage from '../public/hero_small.jpg'
+import heroImage from '../public/hero_small.jpg';
 
 import MainLogo from '../components/MainLogo';
 import Button from '../components/Button';
@@ -42,7 +42,7 @@ export default function Home() {
         src={heroImage}
         alt='Background image of a keyboard'
         layout='fill'
-        placeholder="blur"
+        placeholder='blur'
         quality={100}
       />
       <header className={styles.headerSection}>
@@ -121,16 +121,24 @@ export default function Home() {
           <h3 id='resume'>Luiz Fernando Verissimo</h3>
           <p className={styles.location}>Based in Londrina/PR - Brazil</p>
           <p className={styles.aboutDescription}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            tincidunt leo sed ultrices rhoncus. Sed elit elit, tristique id
-            dolor nec, auctor sagittis est. Donec leo quam, luctus nec varius
-            vulputate, dapibus faucibus metus. Ut dapibus mi vitae ultricies
-            finibus. Donec malesuada eget dolor ut scelerisque. Suspendisse
-            suscipit consequat placerat.
+            Hi, I’m a <strong>Front-End Developer</strong> with passion for
+            solving problems in a modern and effective way. Focused on{' '}
+            <strong>React.js</strong> stack and the techs around, like{' '}
+            <strong>Next.js</strong> and <strong>React Native</strong>. I’m a
+            fast learner person, with attention to details. Geek, gamer and
+            boardgame player on free times.
+            <br />
+            <br />
+            <strong>Let me help to solve your problem!</strong>
           </p>
-          <Button href='#' blank>
-            RESUME <Download />
-          </Button>
+          <div className={styles.aboutButtonContainer}>
+            <Button
+              href='https://github.com/luizfverissimo/luizfverissimo/raw/master/lf_verissimo_RESUME.pdf'
+              blank
+            >
+              RESUME <Download />
+            </Button>
+          </div>
           <h4>Skills</h4>
           <div className={styles.skillsContainer}>
             <TooltipSkills tooltip='HTML 5'>
