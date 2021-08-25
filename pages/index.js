@@ -47,12 +47,13 @@ export default function Home() {
       />
       <header className={styles.headerSection}>
         <div>
-          <a href='#'>
+          <a href='#' >
             <Image
               src='/logo.png'
               alt='Logo LF Verissimo'
               width={124}
               height={15}
+              layout="fixed"
             />
           </a>
           <nav>
