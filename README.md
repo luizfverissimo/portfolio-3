@@ -1,7 +1,7 @@
 <p align="center">
   <img src="./public/apple-touch-icon.png" width="50px"/>
 </p>
-<h1 align="center">Portfolio 💼 - version </h1>
+<h1 align="center">Portfolio 💼 - version 3</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
 </p>
