@@ -14,7 +14,7 @@
     "type": "Desktop app",
     "description": "Application to send automatic WhatsApp messages using a .xls or .xlsx contanct’s table.",
     "buttonText": "Download the app (Win)",
-    "buttonLink": "https://onedrive.live.com/?cid=281f3c8ce128151e&id=281F3C8CE128151E%21219364&authkey=!AHzwEVK1lXf_LTQ",
+    "buttonLink": "https://github.com/luizfverissimo/whatsapp-message-sender/releases/tag/v0.1-alpha",
     "githubLink": "https://github.com/luizfverissimo/whatsapp-message-sender",
     "image": "/prints/whats.png",
     "techs": ["React", "Electron", "Node", "Puppeteer", "Sass"]
