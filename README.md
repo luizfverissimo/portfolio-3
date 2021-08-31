@@ -13,7 +13,7 @@
 ### ✨ [Live](lfverissimo.com)
 
 ## Screenshots
-<iframe width="640" height="360" src="https://www.youtube.com/embed/DQTS5vdQAok" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Click to site the site live](img/thumb.png)](https://www.youtube.com/embed/DQTS5vdQAok)
 
 <img src="img/1.png" alt="1" width="300"/> <img src="img/2.png" alt="2" width="300"/> <img src="img/3.png" alt="3" width="300"/> <img src="img/4.png" alt="4" width="300"/>
 ## Install
