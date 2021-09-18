@@ -134,7 +134,7 @@ export default function Home() {
           </p>
           <div className={styles.aboutButtonContainer}>
             <Button
-              href='https://github.com/luizfverissimo/luizfverissimo/raw/master/lf_verissimo_RESUME.pdf'
+              href='https://github.com/luizfverissimo/luizfverissimo/raw/master/lf_verissimo_RESUME_v2.pdf'
               blank
             >
               RESUME <Download />
