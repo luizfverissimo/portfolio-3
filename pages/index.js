@@ -172,6 +172,25 @@ export default function Home() {
                 <img src='/timeline.png' alt='timeline' />
                 <span>Now</span>
               </div>
+              <p>Front-end developer at</p>
+              <a
+                href='https://www.moskitcrm.com/'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <Image
+                  src='/moskit.png'
+                  alt='Moskit CRM logo'
+                  width={116}
+                  height={51}
+                />
+              </a>
+              
+              <div className={styles.timeline}>
+                <span>Out/2020</span>
+                <img src='/timeline.png' alt='timeline' />
+                <span>Jan/2022</span>
+              </div>
               <p>Front-end developer intern at</p>
               <a
                 href='https://mandarin.com.br/'
@@ -180,18 +199,11 @@ export default function Home() {
               >
                 <Image
                   src='/mandarin.png'
-                  alt='Agência Mandarin'
+                  alt='Agência Mandarin logo'
                   width={170}
                   height={67}
                 />
               </a>
-              <h5>Assignments</h5>
-              <div className={styles.assignmentsContainer}>
-                <TagItem>Email HTMl</TagItem>
-                <TagItem>Landing pages</TagItem>
-                <TagItem>HTML banners</TagItem>
-                <TagItem>Internal tools</TagItem>
-              </div>
             </div>
 
             <div className={styles.educationContainer}>
