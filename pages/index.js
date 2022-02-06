@@ -168,7 +168,7 @@ export default function Home() {
             <div className={styles.experienceSection}>
               <h4>Experience</h4>
               <div className={styles.timeline}>
-                <span>Out/2020</span>
+                <span>Fev/2022</span>
                 <img src='/timeline.png' alt='timeline' />
                 <span>Now</span>
               </div>
